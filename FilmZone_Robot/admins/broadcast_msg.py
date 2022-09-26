@@ -1,4 +1,4 @@
-# (c) [DarkLord] @hellodarklord-99
+# (c) [DarkLord] @hellodarklord
 # (s) @Mo_Tech_YT , @Mo_Tech_Group, @MT_Botz
 # Copyright permission under MIT License
 # All rights reserved by PR0FESS0R-99
