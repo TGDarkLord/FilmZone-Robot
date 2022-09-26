@@ -8,5 +8,5 @@ else
 fi
 cd /FilmZone-Robot
 pip3 install -U -r requirements.txt
-echo "Starting FilmZone RoBot...."
+echo "Starting FilmZone Robot...🤖"
 python3 main.py
