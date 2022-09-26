@@ -1,7 +1,7 @@
 {
     "name": "FilmZone_Robot",
     "description": "Super Fast Telegram Auto Filter Bot",
-    "logo": "https://telegra.ph/file/aabbe1b1f267be91206c5.jpg",
+    "logo": "https://telegra.ph/file/f031509dd9d95561d557e.jpg",
     "stack": "container",
     "keywords": [
       "best",
@@ -10,7 +10,7 @@
       "filter",
       "bot"
     ],
-    "website": "https://youtube.com/c/MoTech_YT",
+    "website": "https://github.com/TGDarkLord/FilmZone-Robot",
     "repository": "https://github.com/TGDarkLord/FilmZone-Robot",
     "env": {
         "BOT_TOKEN": {
