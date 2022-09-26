@@ -1,11 +1,11 @@
 from random import choice
 from config import START_MSG, FORCES_SUB, BOT_PICS, ADMINS, bot_info, DEV_NAME
-from pyrogram import Client as LuciferMoringstar_Robot, filters as Worker
+from pyrogram import Client as FilmZone_Robot, filters as Worker
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from translation import LuciferMoringstar
-from LuciferMoringstar_Robot.database.users_chats_db import db
+from translation import FilmZone
+from FilmZone_Robot.database.users_chats_db import db
 
-@LuciferMoringstar_Robot.on_message(Worker.command(["start"]))
+@FilmZone_Robot.on_message(Worker.command(["start"]))
 async def start_message(bot, message):
     if not await db.is_user_exist(message.from_user.id):
         await db.add_user(message.from_user.id)
