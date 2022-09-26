@@ -1,23 +1,23 @@
 import asyncio 
 
-from pyrogram import Client as lucifermoringstar_robot
+from pyrogram import Client as filmzone_robot
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserIsBlocked, PeerIdInvalid
 
-from LuciferMoringstar_Robot.admins.index_files import index_files_to_db
-from LuciferMoringstar_Robot.database.autofilter_db import get_file_details
-from LuciferMoringstar_Robot.database._utils import get_size, is_subscribed
-from LuciferMoringstar_Robot.database._utils import lucifer_temp
+from FilmZone_Robot.admins.index_files import index_files_to_db
+from FilmZone_Robot.database.autofilter_db import get_file_details
+from FilmZone_Robot.database._utils import get_size, is_subscribed
+from FilmZone_Robot.database._utils import lucifer_temp
 
-from translation import LuciferMoringstar
+from translation import FilmZone
 from config import BUTTONS, FORCES_SUB, CUSTOM_FILE_CAPTION, START_MSG, DEV_NAME, bot_info, ADMINS, team_name, team_link
 
-from LuciferMoringstar_Robot.modules._text_ import module
+from FilmZone_Robot.modules._text_ import module
 
 lock = asyncio.Lock()
 
-@lucifermoringstar_robot.on_callback_query()
-async def cb_handler(client: lucifermoringstar_robot, query):
+@filmzone_robot.on_callback_query()
+async def cb_handler(client: filmzone_robot, query):
     clicked = query.from_user.id
     try:
         typed = query.message.reply_to_message.from_user.id
@@ -201,7 +201,7 @@ async def cb_handler(client: lucifermoringstar_robot, query):
 # ---------- 📁 [ | 𝗚𝗘𝗧 𝗙𝗜𝗟𝗘𝗦 | ] 📁 ---------- #
 
 
-        elif query.data.startswith("lucifermoringstar_robot"):
+        elif query.data.startswith("filmzone_robot"):
             ident, file_id = query.data.split("#")
             files_ = await get_file_details(file_id)
             if not files_:
@@ -266,7 +266,7 @@ async def cb_handler(client: lucifermoringstar_robot, query):
                 InlineKeyboardButton("ℹ️ Help", callback_data="help"),
                 InlineKeyboardButton(text="😎 About", callback_data="crpf") 
                 ]]  
-            await query.message.edit(text=START_MSG.format(mention=query.from_user.mention, bot_name=bot_info.BOT_NAME, bot_username=bot_info.BOT_USERNAME), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+            await query.message.edit(text=FilmZone.START_MSG.format(mention=query.from_user.mention, bot_name=bot_info.BOT_NAME, bot_username=bot_info.BOT_USERNAME), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
         elif query.data == "help":
             buttons = [[
@@ -282,7 +282,7 @@ async def cb_handler(client: lucifermoringstar_robot, query):
                 InlineKeyboardButton('🏠 Home', callback_data='start'),
                 InlineKeyboardButton('❎ Close', callback_data='close_data'),
                 ]]
-            await query.message.edit(text=LuciferMoringstar.HELP_MSG.format(mention=query.from_user.mention), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+            await query.message.edit(text=FilmZone.HELP_MSG.format(mention=query.from_user.mention), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
         elif "crpf" in query.data:
             return await query.answer("""
@@ -303,7 +303,7 @@ async def cb_handler(client: lucifermoringstar_robot, query):
             ]]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_text(
-                text=LuciferMoringstar.ALIVE_MSG,
+                text=FilmZone.ALIVE_MSG,
                 disable_web_page_preview=True,
                 reply_markup=reply_markup,
                 parse_mode='html'
@@ -314,7 +314,7 @@ async def cb_handler(client: lucifermoringstar_robot, query):
             ]]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_text(
-                text=LuciferMoringstar.SEARCH_MSG,
+                text=FilmZone.SEARCH_MSG,
                 disable_web_page_preview=True,
                 reply_markup=reply_markup,
                 parse_mode='html'
@@ -325,7 +325,7 @@ async def cb_handler(client: lucifermoringstar_robot, query):
             ]]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_text(
-                text=LuciferMoringstar.LINK_MSG,
+                text=FilmZone.LINK_MSG,
                 disable_web_page_preview=True,
                 reply_markup=reply_markup,
                 parse_mode='html'
@@ -336,7 +336,7 @@ async def cb_handler(client: lucifermoringstar_robot, query):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=LuciferMoringstar.INFO_MSG,
+            text=FilmZone.INFO_MSG,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -381,7 +381,7 @@ async def cb_handler(client: lucifermoringstar_robot, query):
 
 
         elif query.data == "pages":
-            await query.answer("@LuciferMoringstar_Robot")
+            await query.answer("@FilmZone_Robot")
 
 
     else:
