@@ -341,9 +341,11 @@ async def cb_handler(client: filmzone_robot, query):
             reply_markup=reply_markup,
             parse_mode='html'
         )
+
+
 # ---------- ⚠️ [ | Other | ] ⚠️ ---------- #
 
-        elif query.data.startswith('index'):
+        elif query.data.startswith("index"):
             bot = client 
             if query.data.startswith('index_cancel'):
                 lucifer_temp.CANCEL = True
