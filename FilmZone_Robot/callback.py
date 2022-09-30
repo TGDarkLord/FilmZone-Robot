@@ -344,7 +344,7 @@ async def cb_handler(client: filmzone_robot, query):
 
 # ---------- ⚠️ [ | Other | ] ⚠️ ---------- #
  
-            if query.data.startswith("indexcancel"):
+            if query.data.startswith("index_cancel")
                 lucifer_temp.CANCEL = True
                 return await query.answer("Cancelling Indexing")
             _, raju, chat, lst_msg_id, from_user = query.data.split("#")
