@@ -342,14 +342,13 @@ async def cb_handler(client: filmzone_robot, query):
             parse_mode='html'
         )
 
-
 # ---------- ⚠️ [ | Other | ] ⚠️ ---------- #
 
-        elif query.data.startswith('index')
+        elif query.data.startswith("index"):
             bot = client 
             if query.data.startswith('index_cancel'):
                 lucifer_temp.CANCEL = True
-                return await query.answer('Cancelling Indexing')
+                return await query.answer("Cancelling Indexing")
             _, raju, chat, lst_msg_id, from_user = query.data.split("#")
             if raju == 'reject':
                 await query.message.delete()
@@ -360,9 +359,9 @@ async def cb_handler(client: filmzone_robot, query):
 
   
             if lock.locked():
-                return await query.answer('Wait until previous process complete.', show_alert=True)
+                return await query.answer('🗣️ Wait until previous process complete ✔️', show_alert=True)
             msg = query.message
-            await query.answer('Processing...⏳', show_alert=True)
+            await query.answer('Uploading...⏳', show_alert=True)
             if int(from_user) not in ADMINS:
                 await bot.send_message(int(from_user),
                                        f'Your Submission for indexing {chat} has been accepted by our moderators and will be added soon.',
@@ -370,7 +369,7 @@ async def cb_handler(client: filmzone_robot, query):
             await msg.edit(
                 "Starting Indexing",
                 reply_markup=InlineKeyboardMarkup(
-                  [[InlineKeyboardButton('Cancel', callback_data='index_cancel')]]
+                  [[InlineKeyboardButton('✗ Cancel', callback_data='index_cancel')]]
                   )
             )
             try:
@@ -388,7 +387,3 @@ async def cb_handler(client: filmzone_robot, query):
 
     else:
         await query.answer("Please Request",show_alert=True)
-
-
-
-
