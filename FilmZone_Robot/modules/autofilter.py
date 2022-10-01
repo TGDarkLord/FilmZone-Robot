@@ -28,10 +28,10 @@ async def group_filters(client, message):
                 reply_markup = InlineKeyboardMarkup([[
                  InlineKeyboardButton(text="♻️ HELP ♻️", callback_data=f"msg"
                  ],[
-                 InlineKeyboardButton("🔍 GOOGLE 🔎", url=f"https://www.google.com/search?q={reply}"),
-                 InlineKeyboardButton("🔍 IMDB 🔎", url=f"https://www.imdb.com/find?q={reply}")
+                 InlineKeyboardButton("🔍 GOOGLE", url=f"https://www.google.com/search?q={reply}"),
+                 InlineKeyboardButton("IMDB 🔎", url=f"https://www.imdb.com/find?q={reply}")
                  ],[
-                 InlinekeyboardButton("🗑 CLOSE 🗑", callback_data=f"close_data")
+                 InlinekeyboardButton("🗑 CLOSE 🗑", callback_data="close_data")
                  ]]  
                 )    
                 FilmZone_delete=await message.reply_text(
