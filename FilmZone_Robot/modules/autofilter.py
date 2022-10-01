@@ -26,12 +26,12 @@ async def group_filters(client, message):
             if SPELL_MODE:
                 reply = search.replace(" ", '+')  
                 reply_markup = InlineKeyboardMarkup([[
-                 InlineKeyboardButton("♻️ HELP ♻️", url=f"")
+                 InlineKeyboardButton(text="♻️ HELP ♻️", callback_data=f"msg"
                  ],[
                  InlineKeyboardButton("🔍 GOOGLE 🔎", url=f"https://www.google.com/search?q={reply}"),
                  InlineKeyboardButton("🔍 IMDB 🔎", url=f"https://www.imdb.com/find?q={reply}")
                  ],[
-                 InlinekeyboardButton("🗑 CLOSE 🗑", callback_data="close_data")
+                 InlinekeyboardButton("🗑 CLOSE 🗑", callback_data=f"close_data")
                  ]]  
                 )    
                 FilmZone_delete=await message.reply_text(
