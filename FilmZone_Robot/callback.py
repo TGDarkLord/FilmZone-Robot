@@ -26,7 +26,7 @@ async def link(client, message):
     await message.reply_text("♨️♨️ Are You Movie Lover ? ♨️\n\n🎬 Then You Are Welcomed To My Group For A Daily Breeze Of Movies\n༺━━━━━━━ ✧ ━━━━━━━༻\n\n📌 Old & New Movies/Series\n\n📌 Proper HD, DVD-Rip & Tv-Rip\n\n📌 Available In Various Size\n\n📌 Bengali | Hindi | English & More\n\n༺━━━━━━━ ✧ ━━━━━━━༻\n\n✔️ Group - https://telegram.me/joinchat/e1rP0cmRJdAyMDk1\n\n👆Click Link For Join Group")
 
 
-@filmzone_robot.on_callback_query()
+@Client.on_callback_query()
 async def cb_handler(client: filmzone_robot, query):
     clicked = query.from_user.id
     try:
