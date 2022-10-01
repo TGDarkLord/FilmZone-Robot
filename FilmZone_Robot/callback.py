@@ -1,7 +1,6 @@
 import asyncio
-import filters
 
-from pyrogram import Client as filmzone_robot
+from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserIsBlocked, PeerIdInvalid
 
