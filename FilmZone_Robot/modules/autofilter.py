@@ -31,7 +31,7 @@ async def group_filters(client, message):
                  InlineKeyboardButton("🔍 GOOGLE", url=f"https://www.google.com/search?q={reply}"),
                  InlineKeyboardButton("IMDB 🔎", url=f"https://www.imdb.com/find?q={reply}")
                  ],[
-                 InlinekeyboardButton("🗑 CLOSE 🗑", callback_data="close_data")
+                 InlineKeyboardButton("🗑 CLOSE 🗑", callback_data="close")
                  ]]  
                 )    
                 FilmZone_delete=await message.reply_text(
