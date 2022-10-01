@@ -305,20 +305,16 @@ async def cb_handler(client: filmzone_robot, query):
 
         elif query.data == "search":
             buttons = [[
-             InlineKeyboardButton("🔙 Back", callback_data="help")
-             ]]               
-           await query.message.edit(text=FilmZone.SEARCH_MSG.format(mention=query.from_user.mention, bot_name=bot_info.BOT_NAME, bot_username=bot_info.BOT_USERNAME, dev_name=DEV_NAME), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+              InlineKeyboardButton("🔙 Back", callback_data="help")
+              ]]               
+            await query.message.edit(text=FilmZone.SEARCH_MSG.format(mention=query.from_user.mention, bot_name=bot_info.BOT_NAME, bot_username=bot_info.BOT_USERNAME, dev_name=DEV_NAME), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
         elif query.data == "close":
             await query.message.delete()
         
         elif query.data == "link":
             buttons = [[ 
-             InlineKeyboardButton("🔙 Back", callback_data="help")     
-             
-             ]]
-           await query.message.edit(text=FilmZone.LINK_MSG.format(mention=query.from_user.mention, bot_name=bot_info.BOT_NAME, bot_username=bot_info.BOT_USERNAME, dev_name=DEV_NAME), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
-        
-        elif query.data == "close":
-            await query.message.delete()
+              InlineKeyboardButton("🔙 Back", callback_data="help")     
+              ]]
+            await query.message.edit(text=FilmZone.LINK_MSG.format(mention=query.from_user.mention, bot_name=bot_info.BOT_NAME, bot_username=bot_info.BOT_USERNAME, dev_name=DEV_NAME), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
         
