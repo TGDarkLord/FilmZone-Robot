@@ -27,7 +27,7 @@ async def link(client, message):
 
 
 @Client.on_callback_query()
-async def cb_handler(client: filmzone_robot, query):
+async def cb_handler(client: filters, query):
     clicked = query.from_user.id
     try:
         typed = query.message.reply_to_message.from_user.id
