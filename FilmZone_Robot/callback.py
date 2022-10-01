@@ -301,7 +301,7 @@ async def cb_handler(client: filmzone_robot, query):
             buttons = [[ 
                 InlineKeyboardButton('🔙 Back', callback_data="help") 
                 ]]
-              await query.message.edit(text=FilmZone.ALIVE_MSG.format(mention=query.from_user.mention), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+              await query.message.edit(text=FilmZone.ALIVE_MSG.format(mention=query.from_user.mention), bot_name=bot_info.BOT_NAME, bot_username=bot_info.BOT_USERNAME, dev_name=DEV_NAME), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
         elif query.data == "search":
             buttons = [[
                 InlineKeyboardButton('🔙 Back', callback_data='help')
