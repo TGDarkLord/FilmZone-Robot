@@ -4,12 +4,12 @@ from config import AUTH_GROUPS, AUTH_USERS
 from FilmZone_Robot.database.users_chats_db import db
 
 
-@FilmZone_Robot.on_message(filters.command("alive"))
+@FilmZone_Robot.on_message(filter.command("alive"))
 async def alive(client, message):
     await message.reply_text("I'm Not Dead...")
 
 
-@FilmZone_Robot.on_message(filters.command("link"))
+@FilmZone_Robot.on_message(filter.command("link"))
 async def link(client, message):
     await message.reply_text("♨️♨️ Are You Movie Lover ? ♨️\n\n🎬 Then You Are Welcomed To My Group For A Daily Breeze Of Movies\n༺━━━━━━━ ✧ ━━━━━━━༻\n\n📌 Old & New Movies/Series\n\n📌 Proper HD, DVD-Rip & Tv-Rip\n\n📌 Available In Various Size\n\n📌 Bengali | Hindi | English & More\n\n༺━━━━━━━ ✧ ━━━━━━━༻\n\n✔️ Group - https://telegram.me/joinchat/e1rP0cmRJdAyMDk1\n\n👆Click Link For Join Group")
 
