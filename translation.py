@@ -62,6 +62,15 @@ For More Information Click ℹ️ Help</b></i>"""
 
 <b>Maintained By ✔️ <a href="https://t.me/hellodarklord">DarkLord</a></b>""" 
     
+    FAQ_MSG = """
+
+📌 Read The FAQ Before Contacting Support
+✯ ━━━━━ ✧ ━━━━━ ✯
+👉 Here Are Answers To Frequently Asked Questions About FilmZone
+👉 If You Did Not Find The Answer To Your Question, Please Ask ✔️ <a href="https://t.me/hellodarklord">DarkLord</a>
+    
+<b>Maintained By ✔️ <a href="https://t.me/hellodarklord">DarkLord</a></b>""" 
+    
     ADD_YOUR_GROUP = """**__ഞാൻ ജോലി ചെയ്യുന്ന ഗ്രൂപ്പിൽ ചേരൂ, നിങ്ങൾക്ക് ആവശ്യമുള്ള എല്ലാ സിനിമകളും ആ ഗ്രൂപ്പിൽ അഭ്യർത്ഥിക്കാം! ഇവിടെ അഭ്യർത്തിക്കരുത്..😤__**"""
     
     SPELL_CHECK = """
